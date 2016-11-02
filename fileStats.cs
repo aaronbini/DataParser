@@ -46,6 +46,7 @@ namespace FileTracker
                 else
                 {
                     ErrCheck = true;
+                    break;
                 }        
             }
             Average = Total / NumCount;
