@@ -35,20 +35,20 @@ namespace FileTracker
         {
             decimal num;
             foreach (var stringNum in StringArray)
-                {   
-                    if (Decimal.TryParse(stringNum, out num))
-                    {
-                        Min = (num < Min) ? num : Min;
-                        Max = (num > Max) ? num : Max;
-                        Total += num;
-                        NumArray.Add(num);
-                    }
-                    else
-                    {
-                        ErrCheck = true;
-                    }        
+            {   
+                if (Decimal.TryParse(stringNum, out num))
+                {
+                    Min = (num < Min) ? num : Min;
+                    Max = (num > Max) ? num : Max;
+                    Total += num;
+                    NumArray.Add(num);
                 }
-                Average = Total / NumCount;
+                else
+                {
+                    ErrCheck = true;
+                }        
+            }
+            Average = Total / NumCount;
         }
 
         public void DeviationCalculation()
