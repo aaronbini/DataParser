@@ -61,11 +61,6 @@ namespace FileTracker
             }
             StDev = (decimal)Math.Sqrt(((double)(sumOfSquares)/NumCount));
         }
-
-        public bool ErrorTracker ()
-        {
-            return ErrCheck;
-        }
         
         public void PrintMe()
         {
