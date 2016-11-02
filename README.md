@@ -11,7 +11,7 @@ In order to run with Mono, enter: mcs -out:runCruncher.exe *.cs
 
 Then enter: mono runCruncher.exe
 
-It will process any files in the same directory that end in .data, and will print statistical information for each file.
+It will process any files in the parent directory as well as nested folders that end in .data, and will print statistical information for each file.
 
 The format for the data files must be a string representing space-separated numbers: 123.23 45 345.4 44545.3, etc.
 
