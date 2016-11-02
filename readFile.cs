@@ -10,7 +10,7 @@ namespace FileParser
         {
             string currentDirectory = Directory.GetCurrentDirectory();
             DirectoryInfo directory = new DirectoryInfo(currentDirectory);
-            var directoryList = directory.GetFiles("*.data");
+            var directoryList = directory.GetFiles("*.data", SearchOption.AllDirectories);
 
             foreach (var dataFile in directoryList)
             {
